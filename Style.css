@@ -1,0 +1,253 @@
+/* ------------------ GENERAL BODY AND CONTAINER ------------------ */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  color: #0f172a;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ------------------ NAVBAR ------------------ */
+.navbar {
+  display: flex;
+  list-style-type: none;
+  background-color: #4f46e5;
+  padding: 15px 20px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar li a:hover {
+  color: #22c55e;
+  transform: scale(1.05);
+}
+
+.navbar li:first-child a {
+  font-weight: bold;
+  font-size: 20px;
+  pointer-events: none;
+  margin-right: 40px;
+}
+
+/* ------------------ HEADER ------------------ */
+header {
+  text-align: center;
+  margin: 40px 0;
+}
+
+header h1 {
+  color: #0f172a;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header .subtitle {
+  color: #475569;
+  font-size: 18px;
+}
+
+/* ------------------ ABOUT CARD ------------------ */
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.card img.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  border: none;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #22c55e;
+}
+
+/* ------------------ PROJECTS ------------------ */
+.projects {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.projects h2 {
+  font-size: 28px;
+  color: #4f46e5;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.projects h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #22c55e;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s, border-left 0.3s;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-left: 4px solid #4f46e5;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.project-card p {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ------------------ CONTACT ------------------ */
+.contact {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact h2 {
+  font-size: 28px;
+  color: #4f46e5;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.contact h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #22c55e;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  width: 300px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+.contact button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background-color: #22c55e;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  background-color: #4f46e5;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 8px;
+}
+
+/* ------------------ MOBILE RESPONSIVE ------------------ */
+@media (max-width: 768px) {
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 90%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
